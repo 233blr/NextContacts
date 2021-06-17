@@ -1,23 +1,21 @@
-import parseUsersData from "../utils/parseUsersData";
 import styles from '../styles/users.module.css';
 import User from "../components/user";
+import usersList from "../store/usersList";
+import {observer} from "mobx-react-lite"
+import Header from "../components/header";
+import Sort from "../components/sort";
 
-export const Users = ({users}) => {
+const Users = observer(() => {
   return (
     <div>
-      <h1>Users</h1>
+      <Header/>
+      <h1 className={styles.heading}>Users</h1>
+      <Sort/>
       <div className={styles.users_list}>
-        {users.map(user => <User key={user.id} user={user}/>)}
+        {usersList.users.map(user => <User key={user.id} user={user}/>)}
       </div>
     </div>
   );
-};
+});
 
-export async function getStaticProps() {
-  const response = await fetch('https://randomuser.me/api/?results=50')
-  const json = await response.json();
-  const users = parseUsersData(json.results);
-  return {
-    props: {users},
-  }
-}
+export default Users;

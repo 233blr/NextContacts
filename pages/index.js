@@ -1,16 +1,21 @@
-import Anchor from "../components/anchor";
-import styles from "../styles/index.module.css";
+import {useEffect} from "react";
+import fetchUsers from "../services/fetchUsers";
+import Header from "../components/header";
+import styles from "../styles/heading.module.css"
 
 const App = () => {
+  useEffect(async () => {
+    await fetchUsers();
+  }, []);
+
   return (
     <div>
-      <nav className={styles.nav_bar}>
-        <Anchor href={'/'} text={'Main'}/>
-        <Anchor href={'/users'} text={'Users'}/>
-      </nav>
-      <h1>Main Page</h1>
+      <Header/>
+      <div>
+        <h1 className={styles.heading}>Main Page</h1>
+      </div>
     </div>
   );
-};
+}
 
 export default App;
