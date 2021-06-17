@@ -1,11 +1,13 @@
 import {useState} from 'react';
-import Link from 'next/link';
+import Anchor from "../components/anchor";
 
 const Users = () => {
   const [users, setUsers] = useState([
     {id: 1, name: 'Vasia'},
     {id: 2, name: 'Evgeny'},
   ])
+
+  // const URL = 'https://randomuser.me/api/?results=50';
 
   return (
     <div>
@@ -14,9 +16,7 @@ const Users = () => {
         {
           users.map(user =>
             <li key={user.id}>
-              <Link href={`/users/${user.id}`}>
-                <a>{user.name}</a>
-              </Link>
+              <Anchor href={`/users/${user.id}`} text={user.name}/>
             </li>
           )
         }
