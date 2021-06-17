@@ -1,28 +1,23 @@
-import {useState} from 'react';
-import Anchor from "../components/anchor";
+import parseUsersData from "../utils/parseUsersData";
+import styles from '../styles/users.module.css';
+import User from "../components/user";
 
-const Users = () => {
-  const [users, setUsers] = useState([
-    {id: 1, name: 'Vasia'},
-    {id: 2, name: 'Evgeny'},
-  ])
-
-  // const URL = 'https://randomuser.me/api/?results=50';
-
+export const Users = ({users}) => {
   return (
     <div>
       <h1>Users</h1>
-      <ul>
-        {
-          users.map(user =>
-            <li key={user.id}>
-              <Anchor href={`/users/${user.id}`} text={user.name}/>
-            </li>
-          )
-        }
-      </ul>
+      <div className={styles.users_list}>
+        {users.map(user => <User key={user.id} user={user}/>)}
+      </div>
     </div>
   );
 };
 
-export default Users;
+export async function getStaticProps() {
+  const response = await fetch('https://randomuser.me/api/?results=50')
+  const json = await response.json();
+  const users = parseUsersData(json.results);
+  return {
+    props: {users},
+  }
+}
