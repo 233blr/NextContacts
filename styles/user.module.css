@@ -2,11 +2,46 @@
     display: grid;
     grid-template-rows: 100px;
     grid-template-areas:
-'img' 'img' 'discription' 'vue' 'list' 'rating' 'buttons';
+'img' 'img' 'name' 'login' 'email' 'phone' 'rating' 'button';
     align-items: center;
     justify-items: center;
     height: 280px;
+    border: 1px solid #000;
     border-radius: 5px;
     background-color: #FFF;
     color: #33393D;
+    transition: all 0.5s ease-in-out;
+}
+
+.user_item:hover {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.58);;
+}
+
+.user_img:hover {
+    cursor: pointer;
+}
+
+.user_buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.user_button {
+    border: none;
+    background: #FFF;
+}
+
+.user_button:hover {
+    z-index: 1000;
+    color: red;
+    cursor: pointer;
+}
+
+.user_anchor {
+    text-decoration: none;
+    color: #000;
+}
+
+.user_anchor:hover {
+    color: #24e20e;
 }

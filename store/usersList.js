@@ -2,6 +2,7 @@ import {makeAutoObservable} from "mobx";
 
 class UsersList {
   users = [];
+  user = {};
 
   constructor() {
     makeAutoObservable(this);
@@ -53,6 +54,18 @@ class UsersList {
       );
     }
   };
+
+  deleteUser(id) {
+    this.users = this.users.filter(
+      contact => (contact.id !== id),
+    );
+  };
+
+  getUser(id) {
+    this.user = this.users.find(
+      contact => (contact.id === id),
+    );
+  }
 
 }
 
