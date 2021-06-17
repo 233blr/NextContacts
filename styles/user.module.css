@@ -1,0 +1,12 @@
+.user_item {
+    display: grid;
+    grid-template-rows: 100px;
+    grid-template-areas:
+'img' 'img' 'discription' 'vue' 'list' 'rating' 'buttons';
+    align-items: center;
+    justify-items: center;
+    height: 280px;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: #33393D;
+}
