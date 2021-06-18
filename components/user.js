@@ -25,9 +25,8 @@ const User = ({user}) => {
         <button
           className={styles.user_button}
           type={"button"}
-          onClick={(event) => {
+          onClick={() => {
             usersList.deleteUser(user.id)
-            event.stopPropagation()
           }}
         >
           Delete

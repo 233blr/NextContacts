@@ -7,8 +7,6 @@ const Sort = () => {
     'Name', 'Login', 'Email', 'Phone', 'Rating',
   ];
 
-  const [currentCategory, setCategory] = useState('');
-
   return (
     <div className={styles.sort_body}>
       <ul className={styles.sort_item}>
@@ -18,10 +16,10 @@ const Sort = () => {
             key={item}
             onClick={() => {
               usersList.sortUsers(item.toLowerCase());
-              setCategory(item);
+              usersList.setCategory(item);
             }}
             style={
-              currentCategory === item
+              usersList.category === item
                 ? {textDecoration: 'underline'}
                 : {color: '#000'}
             }

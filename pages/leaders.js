@@ -9,7 +9,7 @@ const Leaders = () => {
       <Header/>
       <h1 className={styles.heading}>Leaders</h1>
       <div>
-        {usersList.sortLeaders().map(item => <div key={item.id}>{item}</div>)}
+        {usersList.sortLeaders().map(item => <div key={item.id}>{item.name}</div>)}
       </div>
     </div>
   );

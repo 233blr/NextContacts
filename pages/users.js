@@ -6,6 +6,7 @@ import Header from "../components/header";
 import Sort from "../components/sort";
 
 const Users = observer(() => {
+
   return (
     <div>
       <Header/>

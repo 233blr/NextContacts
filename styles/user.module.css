@@ -17,8 +17,8 @@
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.58);;
 }
 
-.user_img:hover {
-    cursor: pointer;
+.user_img {
+    border-radius: 5px;
 }
 
 .user_buttons {
