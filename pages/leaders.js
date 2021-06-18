@@ -2,6 +2,7 @@ import React from 'react';
 import Header from "../components/header";
 import styles from "../styles/leaders.module.css";
 import usersList from "../store/usersList";
+import Leader from "../components/leader";
 
 const Leaders = () => {
   return (
@@ -9,7 +10,7 @@ const Leaders = () => {
       <Header/>
       <h1 className={styles.heading}>Leaders</h1>
       <div>
-        {usersList.sortLeaders().map(item => <div key={item.id}>{item.name}</div>)}
+        {usersList.sortLeaders().map(item => <Leader key={item.id} leader={item}/>)}
       </div>
     </div>
   );

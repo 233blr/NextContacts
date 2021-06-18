@@ -1,0 +1,11 @@
+.leader_body {
+    background-color: #FFF;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leader_item {
+    margin: 10px;
+}
