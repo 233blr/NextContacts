@@ -1,4 +1,3 @@
-import React, {useState} from 'react';
 import usersList from "../store/usersList";
 import styles from "../styles/sort.module.css";
 

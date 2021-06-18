@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from "../components/header";
-import styles from "../styles/heading.module.css";
+import styles from "../styles/leaders.module.css";
 import usersList from "../store/usersList";
 
 const Leaders = () => {

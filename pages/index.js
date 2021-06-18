@@ -1,7 +1,7 @@
 import {useEffect} from "react";
 import fetchUsers from "../services/fetchUsers";
 import Header from "../components/header";
-import styles from "../styles/heading.module.css"
+import styles from "../styles/leaders.module.css"
 
 const App = () => {
   useEffect(async () => {
