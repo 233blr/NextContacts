@@ -1,3 +1,8 @@
 .heading {
     text-align: center;
 }
+
+.leaders_alert {
+    display: inline;
+    text-align: center;
+}
