@@ -3,6 +3,7 @@ import {makeAutoObservable} from "mobx";
 class UsersList {
   users = [];
   user = {};
+  category = '';
 
   constructor() {
     makeAutoObservable(this);
@@ -57,14 +58,27 @@ class UsersList {
 
   deleteUser(id) {
     this.users = this.users.filter(
-      contact => (contact.id !== id),
+      user => (user.id !== id),
     );
   };
 
   getUser(id) {
     this.user = this.users.find(
-      contact => (contact.id === id),
+      user => (user.id === id),
     );
+  }
+
+  ratingHandler(val) {
+    val ?
+      this.user = {...this.user, rating: this.user.rating + 1} :
+      this.user = {...this.user, rating: this.user.rating - 1};
+    this.users.forEach(item => {
+      if (item.id === this.user.id) item.rating = this.user.rating;
+    })
+  };
+
+  setCategory(value) {
+    this.category = value;
   }
 
 }
