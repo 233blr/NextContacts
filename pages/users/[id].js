@@ -17,7 +17,7 @@ const UserId = observer(() => {
         <div className={styles.userid_body}>
           <p>{usersList.user.id}</p>
           <div className={styles.userid_items}>
-            <img src={usersList.user.fullImage} alt={usersList.user.name}/>
+            <img className={styles.userid_img} src={usersList.user.fullImage} alt={usersList.user.name}/>
             <p>{`${usersList.user.name} ${usersList.user.lastName}`}</p>
             <p>{usersList.user.login}</p>
             <p>{usersList.user.email}</p>

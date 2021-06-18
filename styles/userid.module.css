@@ -3,11 +3,16 @@
     grid-template-rows: 50px 1fr;
     justify-items: center;
     align-items: center;
+    background-color: #FFF;
+    margin: 30px;
+    height: 80vh;
+    border-radius: 5px;
 }
 
 .userid_items {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 10px;
 }
@@ -20,12 +25,13 @@
 }
 
 .userid_button {
+    padding: 10px;
     border: none;
     background: #FFF;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10px;
-    height: 10px;
+    font-size: large;
+}
+
+.userid_img {
+    border-radius: 5px;
 }
