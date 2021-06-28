@@ -1,12 +1,11 @@
-import Anchor from "../components/anchor";
+import MainContainer from "../components/mainContainer";
 import styles from "../styles/header.module.css";
 
 const Error = () => {
   return (
-    <div>
+    <MainContainer>
       <h1 className={styles.heading}>Page not found</h1>
-      <Anchor href={'/'} text={'To Main Page'} />
-    </div>
+    </MainContainer>
   )
 }
 
