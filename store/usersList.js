@@ -10,7 +10,7 @@ class UsersList {
   }
 
   sortLeaders() {
-    const leaders = [...this.users].filter(item => item.rating > 3);
+    const leaders = [...this.users].filter(item => item.rating > 0);
     if (leaders.length) {
       leaders.sort((a, b) => {
         if (a.rating < b.rating) return 1;
