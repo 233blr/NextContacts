@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "../components/header";
+import MainContainer from "../components/mainContainer";
 import styles from "../styles/leaders.module.css";
 import usersList from "../store/usersList";
 import Leader from "../components/leader";
@@ -7,8 +7,7 @@ import Anchor from "../components/anchor";
 
 const Leaders = () => {
   return (
-    <div>
-      <Header/>
+    <MainContainer keywords={'leaders page'}>
       <h1 className={styles.heading}>Leaders</h1>
       <div>
         {usersList.sortLeaders().length ?
@@ -18,7 +17,7 @@ const Leaders = () => {
             <p><Anchor text={'go to Users page'} href={'./users'}/></p>
           </div>}
       </div>
-    </div>
+    </MainContainer>
   );
 };
 
