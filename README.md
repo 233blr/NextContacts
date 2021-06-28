@@ -7,5 +7,5 @@ npm install
 Stack:
 
 - NextJs
-- ModX
+- MobX
 - mobx-react-lite
